@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="Assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="Assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="Assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="Assets/favicon/site.webmanifest">
+  <link rel="mask-icon" href="Assets/favicon/safari-pinned-tab.svg" color="#b58045">
+  <meta name="msapplication-TileColor" content="#182939">
+  <meta name="theme-color" content="#ffffff">
+  <title>Website title</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="CSS/main/app.css">
+</head>
+<body class="body">
+  <div class="navbar">
+    <div class="wrapper">
+      <a href="" class="underline desktop">CZ | <span class="en">EN</span></a>
+      <a href="" class="logo">
+        <img src="assets/img/logos/WM-logo.svg" alt="">
+      </a>
+      <ul class="desktop">
+        <li><a href="" class="underline">e-shop</a></li>
+        <li><a href="" class="underline">kontakt</a></li>
+      </ul>
+      <div id="menu-toggle" class="mobile menu-toggle" onclick="hamTransition()">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="cross">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="mobile-menu mobile">
+        <ul>
+          <li><a href="">english</a></li>
+          <li><a href="">e-shop</a></li>
+          <li><a href="">kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="head">
+    <video autoplay muted loop class="bg-video">
+      <source src="assets/video/bg-video-sample.mp4" type="video/mp4">
+    </video>
+    <div class="container-xxl header-logos desktop">
+      <div class="row">
+        <div class="col-2">
+          <p>autorizované servisní středisko značek:</p>
+        </div>
+        <div class="col-10">sth</div>
+      </div>
+    </div>
+  </div> 
+  <script src="JS/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="JS/scroll.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <script src="JS/smooth-scrollbar.js"></script>
+  
+  <script>
+    var year1 = new Date();
+    var year2 = year1.getUTCFullYear();
+    document.getElementById("year").innerHTML = year2;
+  </script>
+</body>
+</html>
