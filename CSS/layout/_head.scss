@@ -24,4 +24,33 @@
             color: $white;
         }
     }
+    .head-bottom-menu {
+        bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        .bottom-menu-item {
+            position: relative;
+            width: 100%;
+            text-align: center;
+            a {
+                text-transform: uppercase;
+                font-weight: 500;
+                color: $white;
+            }
+            &:before {
+                position: absolute;
+                content: '';
+                height: 4px;
+                top: -10px; 
+                margin: 0 auto;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: $color-main;
+                border-radius: 4px;
+            }
+        }
+    }
 }

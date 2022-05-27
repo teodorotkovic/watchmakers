@@ -73,6 +73,39 @@ ul li {
   color: #ffffff;
 }
 
+.head .head-bottom-menu {
+  bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.head .head-bottom-menu .bottom-menu-item {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.head .head-bottom-menu .bottom-menu-item a {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.head .head-bottom-menu .bottom-menu-item:before {
+  position: absolute;
+  content: '';
+  height: 4px;
+  top: -10px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #B58045;
+  border-radius: 4px;
+}
+
 .navbar {
   width: 100%;
   position: fixed;
@@ -376,6 +409,7 @@ ul li {
 
 .button p {
   margin-bottom: 0;
+  font-weight: 400;
 }
 
 @media only screen and (max-width: 1400px) {
