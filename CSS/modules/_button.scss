@@ -1,0 +1,13 @@
+.button {
+    padding: 8px 25px;
+    background-color: $color-main;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+    border-radius: 30px;
+    width: fit-content;
+    p {
+        margin-bottom: 0;
+    }
+}

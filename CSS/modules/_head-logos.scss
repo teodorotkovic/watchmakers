@@ -1,9 +1,27 @@
 .header-logos {
-    margin-top: 200px;
+    margin-top: 180px;
     padding: 0;
     z-index: 999;
     color: $white;
     p {
         text-transform: uppercase;
+    }
+    .col-2 {
+        p {
+            min-width: 150px;
+        }
+    }
+    ul {
+        width: 100%;
+        li {
+            margin-right: 25px;
+        }
+        .button {
+            transform: translateY(5px);
+            img {
+                width: 20px;
+                margin-left: 5px;
+            }
+        }
     }
 }

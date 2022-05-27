@@ -11,4 +11,17 @@
         height: 100%;
         object-fit: cover;
     }
+    .head-text {
+        margin-top: 15vh;
+        h1 {
+            text-align: center;
+            color: $white;
+        }
+        .button {
+            margin: auto;
+            margin-top: 30px;
+            text-transform: uppercase;
+            color: $white;
+        }
+    }
 }

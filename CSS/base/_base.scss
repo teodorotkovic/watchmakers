@@ -15,5 +15,22 @@ a {
     color: $white;
     text-decoration: none;
     position: relative;
+    &:hover {
+        color: inherit;
+    }
+}
+p {
+    font-size: 16px;
+}
+h1 {
+    font-size: 42px;
+    font-weight: 400;
+}
+
+ul {
+    list-style: none;
+    li {
+        display: inline-block;
+    }
 }
 
