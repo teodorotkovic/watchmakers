@@ -1,0 +1,37 @@
+
+.all-logos {
+    position: relative;
+    color: $color-second;
+    .col {
+        margin-top: 80px;
+        text-align: center;
+        .WM {
+            text-transform: uppercase;
+            color: $color-main;
+            margin-bottom: 10px;
+        }
+    }
+    .autorizovany-dealer {
+        margin-top: 40px;
+    }
+    .logo-section {
+        ul {
+            width: 100%;
+            padding-left: 0;
+            margin-top: -80px;
+            li {
+                .logos-item {
+                    margin-top: 40px;
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+    .bg-grey-sprocket {
+        z-index: -100;
+        position: fixed;
+        height: 120vh;
+        top: 0;
+        left: 0px;
+    }
+}

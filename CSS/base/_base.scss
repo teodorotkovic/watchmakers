@@ -4,7 +4,6 @@ body {
     font-family: $font-main;
     font-size: 16px;
     font-weight: 300;
-    height: 3000px;
 }
 
 .mobile {
@@ -25,6 +24,11 @@ p {
 h1 {
     font-size: 42px;
     font-weight: 400;
+}
+h2 {
+    font-size: 42px;
+    font-weight: 300;
+    color: $color-second;
 }
 
 ul {

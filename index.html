@@ -14,8 +14,30 @@
   <title>Website title</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <link rel="stylesheet" href="CSS/main/app.css">
+
+  <!-- logo-anim -->
+  <link href="logo-animation-files/gwdpage_style.css" rel="stylesheet" data-version="13" data-exports-type="gwd-page">
+  <link href="logo-animation-files/gwdpagedeck_style.css" rel="stylesheet" data-version="14" data-exports-type="gwd-pagedeck">
+  <link href="logo-animation-files/gwdimage_style.css" rel="stylesheet" data-version="16" data-exports-type="gwd-image">
+  <link rel="stylesheet" href="logo-animation-files/logo-anim.css">
+
 </head>
 <body class="body">
+  <div style="display: none;" class="intro-blackscreen" id="intro-animation">
+    <gwd-google-ad id="gwd-ad" polite-load="">
+      <gwd-metric-configuration></gwd-metric-configuration>
+      <gwd-pagedeck class="gwd-page-container" id="pagedeck">
+        <gwd-page id="page1" class="gwd-page-wrapper gwd-page-size gwd-lightbox" data-gwd-width="100%" data-gwd-height="100%">
+          <div class="gwd-page-content gwd-page-size">
+            <gwd-image id="Gear" source="logo-animation-files/assets/Gear.png" scaling="stretch" class="gwd-image-1jwq gwd-gen-18k1gwdanimation"></gwd-image>
+            <gwd-image id="Small_Hand" source="logo-animation-files/assets/Small Hand.png" scaling="stretch" class="gwd-image-l1bb gwd-gen-1ydxgwdanimation"></gwd-image>
+            <gwd-image id="Big_Hand" source="logo-animation-files/assets/Big Hand.png" scaling="stretch" class="gwd-image-1far gwd-gen-18jwgwdanimation"></gwd-image>
+            <gwd-image id="WM_Atelier" source="logo-animation-files/assets/WM Atelier.png" scaling="stretch" class="gwd-image-75do gwd-gen-1qhngwdanimation"></gwd-image>
+          </div>
+        </gwd-page>
+      </gwd-pagedeck>
+    </gwd-google-ad>
+  </div>
   <div class="navbar">
     <div class="wrapper">
       <a href="" class="underline desktop">CZ | <span class="en">EN</span></a>
@@ -47,9 +69,11 @@
     </div>
   </div>
   <div class="head">
-    <video autoplay muted loop class="bg-video">
-      <source src="assets/video/bg-video-sample.mp4" type="video/mp4">
-    </video>
+    <div class="video-wrapper">
+      <video autoplay muted loop class="bg-video">
+        <source src="assets/video/bg-video-sample.mp4" type="video/mp4">
+      </video>
+    </div>
     <div class="container-xxl header-logos desktop">
       <div class="row">
         <div class="col-2">
@@ -63,7 +87,7 @@
             <li><img src="Assets/img/logos/Tissot-white.svg" alt="" class="tissot-white logos-item"></li>
             <li><img src="Assets/img/logos/Certina-white.svg" alt="" class="certina-white logos-item"></li>
             <li><img src="Assets/img/logos/Mido-white.svg" alt="" class="mido-white logos-item"></li>
-            <li><a href=""><div class="button"><p>více</p><img src="Assets/img/icons/arrow.svg" alt=""></div></a></li>
+            <li><a href="#"><div class="button"><p>více</p><img src="Assets/img/icons/arrow.svg" alt=""></div></a></li>
           </ul>
         </div>
       </div>
@@ -73,33 +97,105 @@
         <div class="col"></div>
         <div class="col-9 col-lg-5">
           <h1>Specialisté na servis, opravy a péči o vysoce kvalitní mechanické a quartzové hodinky.</h1>
-          <a href=""><div class="button"><p>rezervovat servis</p></div></a>
+          <div class="button"><a href="#"><p>rezervovat servis</p></a></div>
         </div>
         <div class="col"></div>
       </div>
     </div>
     <div class="container-xxl position-absolute head-bottom-menu">
-      <div class="row">
-        <div class="col-0 col-lg-3"></div>
+      <div class="row justify-content-center">
         <div class="col-4 col-lg-2">
-          <div class="bottom-menu-item">
-            <a href="">o nás</a>
-          </div>
+          <a href="">
+            <div class="bottom-menu-item">
+              <p>o nás</p>
+            </div>
+          </a>
         </div>
         <div class="col-4 col-lg-2">
-          <div class="bottom-menu-item">
-            <a href="">galerie</a>
-          </div>
+          <a href="">
+            <div class="bottom-menu-item">
+              <p>galerie</p>
+            </div>
+          </a>
         </div>
         <div class="col-4 col-lg-2">
-          <div class="bottom-menu-item">
-            <a href="">kontakt</a>
-          </div>
+          <a href="">
+            <div class="bottom-menu-item">
+              <p>kontakt</p>
+            </div>
+          </a>
         </div>
-        <div class="col-0 col-lg-3"></div>
       </div>
     </div>
   </div>
+  <div class="container-xxl all-logos">
+    <img src="Assets/img/images/sprocket-grey-bg.svg" class="bg-grey-sprocket" alt="">
+    <div class="row justify-conten-center">
+      <div class="col">
+        <h2 class="WM">watchmakers cz</h2>
+        <h2>autorizované, certifikované <br> servisní středisko značek:</h2>
+      </div>
+    </div>
+    <div class="row justify-conten-center logo-section">
+      <div class="col">
+        <ul>
+          <li>
+            <img src="Assets/img/logos/Omega-dark.svg" alt="" class="omega-dark logos-item">
+            <img src="Assets/img/logos/Longines-dark.svg" alt="" class="longines-dark logos-item">
+          </li>
+          <li>
+            <img src="Assets/img/logos/Rado-dark.svg" alt="" class="rado-dark logos-item">
+            <img src="Assets/img/logos/Tissot-dark.svg" alt="" class="tissot-dark logos-item">
+          </li>
+          <li>
+            <img src="Assets/img/logos/Certina-dark.svg" alt="" class="certina-dark logos-item">
+            <img src="Assets/img/logos/Mido-dark.svg" alt="" class="mido-dark logos-item">
+          </li>
+          <br>
+          <li>
+            <img src="Assets/img/logos/Hamilton-dark.svg" alt="" class="hamilton-dark logos-item">
+            <img src="Assets/img/logos/Union-glashutte-dark.svg" alt="" class="glashutte-dark logos-item">
+          </li>
+          <li>
+            <img src="Assets/img/logos/Cvstos-dark.svg" alt="" class="cvstos-dark logos-item">
+            <img src="Assets/img/logos/Oris-dark.svg" alt="" class="oris-dark logos-item">
+          </li>
+          <li>
+            <img src="Assets/img/logos/Frederique-Constant-dark.svg" alt="" class="frederique-constant-dark logos-item">
+            <img src="Assets/img/logos/Maurice-Lacroix-dark.svg" alt="" class="maurice-lacroix-dark logos-item">
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row justify-conten-center">
+      <div class="autorizovany-dealer col">
+        <h2>Autorizovaný dealer:</h2>
+      </div>
+    </div>
+    <div class="row justify-conten-center logo-section">
+      <div class="col">
+        <ul>
+          <li>
+            <img src="Assets/img/logos/Hirsch-dark.svg" alt="" class="hirsch-dark logos-item">
+            <img src="Assets/img/logos/Rubberb-dark.svg" alt="" class="rubberb-dark logos-item">
+          </li>
+          <li>
+            <img src="Assets/img/logos/Leanschi-dark.svg" alt="" class="leanschi-dark logos-item">
+            <img src="Assets/img/logos/Montegrappa-dark.svg" alt="" class="montegrappa-dark logos-item">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script data-source="logo-animation-files/gwd_webcomponents_v1_min.js" data-version="2" data-exports-type="gwd_webcomponents_v1" src="logo-animation-files/gwd_webcomponents_v1_min.js"></script>
+  <script data-source="logo-animation-files/gwdpage_min.js" data-version="13" data-exports-type="gwd-page" src="logo-animation-files/gwdpage_min.js"></script>
+  <script data-source="logo-animation-files/gwdpagedeck_min.js" data-version="14" data-exports-type="gwd-pagedeck" src="logo-animation-files/gwdpagedeck_min.js"></script>
+  <script data-source="https://s0.2mdn.net/ads/studio/Enabler.js" data-exports-type="gwd-google-ad" src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+  <script data-source="logo-animation-files/gwdgooglead_min.js" data-version="8" data-exports-type="gwd-google-ad" src="logo-animation-files/gwdgooglead_min.js"></script>
+  <script data-source="logo-animation-files/gwdimage_min.js" data-version="16" data-exports-type="gwd-image" src="logo-animation-files/gwdimage_min.js"></script>
+  <script src="logo-animation-files/logo-anim.js"></script>
+
   <script src="JS/main.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="JS/scroll.js"></script>

@@ -21,7 +21,12 @@ function hamTransition() {
     mobileMenu.classList.toggle('open');
 }
 
+//blackscreen hidden after some time
 
+setTimeout(() => {
+    const box = document.getElementById('intro-animation');
+    box.style.display = 'none';
+}, 9000);
 
 //fade in effect on scroll
 

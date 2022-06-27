@@ -38,6 +38,7 @@
                 }
             }
             .head-text {
+                transform: translateX(0px);
                 margin-top: 80px;
             }
         }
@@ -119,6 +120,21 @@
         .head {
             .head-text {
                 margin-top: 200px
+            }
+        }
+        .all-logos {
+            .bg-grey-sprocket {
+                height: 60vh;
+            }
+        }
+    }
+}
+
+@media only screen and (max-height: 700px) {
+    body {
+        .head {
+            .head-text {
+                margin-top: 130px
             }
         }
     }
