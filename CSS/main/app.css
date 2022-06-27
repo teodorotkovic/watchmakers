@@ -132,6 +132,7 @@ ul li {
 }
 
 .all-logos {
+  z-index: -100;
   position: relative;
   color: #182939;
 }
@@ -667,8 +668,9 @@ ul li {
             transform: translateX(0px);
   }
   body .navbar .wrapper .mobile-menu {
-    -webkit-transition: .25s ease-in-out;
-    transition: .25s ease-in-out;
+    pointer-events: none;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
     -webkit-transition-delay: .5s;
             transition-delay: .5s;
     z-index: -1;
@@ -681,9 +683,10 @@ ul li {
     height: 100vh;
   }
   body .navbar .wrapper .mobile-menu.open {
-    -webkit-transition: .25s ease-in-out;
-    transition: .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
     opacity: 1;
+    pointer-events: all;
   }
   body .navbar .wrapper .mobile-menu ul {
     padding: 0;

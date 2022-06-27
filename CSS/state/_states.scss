@@ -84,7 +84,8 @@
                     transform: translateX(0px);
                 }
                 .mobile-menu {
-                    transition:.25s ease-in-out;
+                    pointer-events: none;
+                    transition: all .25s ease-in-out;
                     transition-delay:.5s;
                     z-index: -1;
                     background-color: $white;
@@ -95,8 +96,9 @@
                     width: 100vw;
                     height: 100vh;
                     &.open {
-                        transition:.25s ease-in-out;
+                        transition: all .25s ease-in-out;
                         opacity: 1;
+                        pointer-events: all;
                     }
                     ul {
                         padding: 0;
