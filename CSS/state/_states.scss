@@ -68,7 +68,7 @@
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
     .desktop {
         display: none;
     }
@@ -129,6 +129,11 @@
                 height: 60vh;
             }
         }
+        .about-us {
+            p {
+                max-width: 100%;
+            }
+        }
     }
 }
 
@@ -137,6 +142,16 @@
         .head {
             .head-text {
                 margin-top: 130px
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-height: 700px) {
+    body {
+        .head {
+            .head-text {
+                margin-top: 20px
             }
         }
     }
