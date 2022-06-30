@@ -21,6 +21,7 @@
     }
     &.about-dark {
         margin-top: 20px;
+        padding: 0px;
         padding-top: 20px;
         background-color: $color-second;
         p {
@@ -36,7 +37,6 @@
     }
     &.about-darker {
         position: relative;
-        margin-bottom: 500px;
         margin-top: 0;
         padding-top: 20px;
         padding-bottom: 120px;
@@ -66,12 +66,14 @@
             }
         }
         .bg-wrapper {
+            left: 0;
+            overflow: hidden;
             z-index: 0;
             top: 0px;
             bottom: -20px;
             position: absolute;
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            max-height: 100%;
             clip: rect(0, auto, auto, 0);
             img {
                 top: 0px;

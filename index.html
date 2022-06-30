@@ -49,12 +49,21 @@
         <li><a href="" class="underline">kontakt</a></li>
       </ul>
       <div id="menu-toggle" class="mobile menu-toggle" onclick="hamTransition()">
-        <div class="hamburger">
+        <div class="hamburger light">
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <div class="cross">
+        <div class="hamburger dark">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="cross light">
+          <span></span>
+          <span></span>
+        </div>
+        <div class="cross dark">
           <span></span>
           <span></span>
         </div>
@@ -223,7 +232,7 @@
       <img src="Assets/img/images/sprocket-dark-bg3.svg" alt="">
     </div>
     <div class="container-xxl">
-      <div class="row">
+      <div class="row justify-content-center">
         <div class="col-11 col-lg-4 profile">
           <img src="Assets/img/images/jiri-grunt.png" alt="">
           <h2>Jiří Grunt</h2>
@@ -240,6 +249,60 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at lectus eu velit ullamcorper blandit quis nec tortor.</p>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="container-xxl gallery">
+    <div class="row gallery-header">
+      <div class="col">
+        <h1>Galerie</h1>
+      </div>
+    </div>
+    <div class="row justify-content-center photos">
+      <div class="col-11 col-lg-4">
+        <img src="Assets/img/images/interior1-sm.jpg" onclick="openGallery1()" alt="">
+        <img src="Assets/img/images/interior2-sm.jpg" onclick="openGallery2()" alt="">
+      </div>
+      <div class="col-11 col-lg-4">
+        <img src="Assets/img/images/interior3-sm.jpg" onclick="openGallery3()" alt="">
+        <img src="Assets/img/images/interior4-sm.jpg" onclick="openGallery4()" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="carousel-container">
+    <div id="carouselExampleControls" class="carousel slide" data-interval="false">
+      <div class="cross" onclick="closeGallery()">
+        <img src="Assets/img/icons/cross.svg" alt="">
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item photo-1">
+          <div class="image-container d-block w-100">
+            <img src="Assets/img/images/interior1.jpg" class="" alt="...">
+          </div>
+        </div>
+        <div class="carousel-item photo-2">
+          <div class="image-container d-block w-100">
+            <img src="Assets/img/images/interior2.jpg" class="" alt="...">
+          </div>
+        </div>
+        <div class="carousel-item photo-3">
+          <div class="image-container d-block w-100">
+            <img src="Assets/img/images/interior3.jpg" class="" alt="...">
+          </div>
+        </div>
+        <div class="carousel-item photo-4">
+          <div class="image-container d-block w-100">
+            <img src="Assets/img/images/interior4.jpg" class="" alt="...">
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
   </div>
 

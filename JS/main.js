@@ -1,6 +1,8 @@
 let navBg = document.querySelector(".navbar");
 let hamburger = document.querySelector(".menu-toggle")
 let mobileMenu = document.querySelector(".mobile-menu")
+let openedGallery = document.querySelector(".carousel-container")
+let carouselItem = document.querySelector(".carousel-item")
 
 //navbar chnge on scroll
 
@@ -27,6 +29,33 @@ setTimeout(() => {
     const box = document.getElementById('intro-animation');
     box.style.display = 'none';
 }, 9000);
+
+//open gallery
+
+function closeGallery() {
+    openedGallery.classList.remove('active-gallery');
+    document.querySelector(".photo-1").classList.remove('active');
+    document.querySelector(".photo-2").classList.remove('active');
+    document.querySelector(".photo-3").classList.remove('active');
+    document.querySelector(".photo-4").classList.remove('active');
+}
+
+function openGallery1() {
+    openedGallery.classList.toggle('active-gallery');
+    document.querySelector(".photo-1").classList.toggle('active');
+}
+function openGallery2() {
+    openedGallery.classList.toggle('active-gallery');
+    document.querySelector(".photo-2").classList.toggle('active');
+}
+function openGallery3() {
+    openedGallery.classList.toggle('active-gallery');
+    document.querySelector(".photo-3").classList.toggle('active');
+}
+function openGallery4() {
+    openedGallery.classList.toggle('active-gallery');
+    document.querySelector(".photo-4").classList.toggle('active');
+}
 
 //fade in effect on scroll
 

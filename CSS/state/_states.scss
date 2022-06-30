@@ -21,7 +21,8 @@
         }
         .head {
             .header-logos {
-                margin: 130px 20px 20px 20px;
+                margin-top: 130px;
+                padding-left: 20px;
                 height: min-content;
                 .col-10 {
                     padding-right: 40px;
@@ -36,10 +37,22 @@
                         margin-left: -10px;
                     }
                 }
+                .row {
+                    width: 100%;
+                }
             }
             .head-text {
                 transform: translateX(0px);
                 margin-top: 80px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1200px) {
+    body {
+        .carousel-container {
+            .carousel {
+                width: 100%;
             }
         }
     }
@@ -51,6 +64,38 @@
             ul {
                 li:nth-child(6) {
                     display: none;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 992px) {
+    body {
+        .about-us {
+            &.about-dark {
+                h1 {
+                    margin-bottom: 20px;
+                }
+            }
+            &.about-darker {
+                padding-top: 0px;
+                .bg-wrapper {
+                    left: 0px;
+                    img {
+                        top: 20vh;
+                        width: 120%;
+                        height: auto;
+                    }
+                }
+                .profile {
+                    img {
+                        margin-top: 80px;
+                    }
+                    &:nth-child(1){
+                        img {
+                            margin-top: 40px;
+                        }
+                    }
                 }
             }
         }
@@ -121,17 +166,34 @@
         }
         .head {
             .head-text {
-                margin-top: 200px
+                margin-top: 200px;
+                .row {
+                    h1 {
+                        font-size: 35px;
+                    }
+                }
             }
         }
-        .all-logos {
-            .bg-grey-sprocket {
-                height: 60vh;
-            }
+        .bg-grey-sprocket {
+            height: 60vh;
         }
         .about-us {
             p {
                 max-width: 100%;
+            }
+            &.about-darker {
+                padding-bottom: 80px;
+            }
+        }
+        .gallery {
+            margin-top: 60px;
+            .gallery-header {
+                h1 {
+                    font-size: 70px;
+                }
+            }
+            .photos {
+                margin-top: -40px;
             }
         }
     }
@@ -156,3 +218,13 @@
         }
     }
 }
+
+//safari compatible bg
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+    .head {
+        .video-wrapper {
+            clip: auto;
+            -webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%)
+        }
+    }
+  }
