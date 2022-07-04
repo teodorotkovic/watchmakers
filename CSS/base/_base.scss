@@ -7,10 +7,6 @@ body {
     font-weight: 300;
 }
 
-.mobile {
-    display: none;
-}
-
 a {
     color: $white;
     text-decoration: none;
@@ -39,3 +35,30 @@ ul {
     }
 }
 
+
+.mobile {
+    display: none;
+}
+
+.en {
+    display: none!important;
+}
+
+.cz-off {
+    display: none!important;
+}
+
+.scroll-to {
+    padding-top: 200px;
+    margin-top: -200px;
+}
+
+.fade-in {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 250ms ease-in;
+}
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0px);
+}

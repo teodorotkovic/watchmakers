@@ -1,0 +1,91 @@
+.form-wrapper {
+    display: none;
+    z-index: 200;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    color: $color-main;
+    background-color: $color-grey;
+    justify-content: center;
+    align-items: center;
+    .form-box {
+        max-height: 100%;
+        overflow-y: auto;
+        background-color: $white;
+        width: 100%;
+        max-width: 1000px;
+        padding: 50px;
+        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+        h1 {
+            margin-bottom: 20px;
+            color: $color-main;
+        }
+        .col-1 {
+            display: flex;
+            justify-content: flex-end;
+            .cross {
+                width: 30px;
+                min-width: 30px;
+                margin-top: -15px;
+                cursor: pointer;
+            }
+        }
+        form {
+            .input-block,
+            .form-check,
+            .form-group {
+                label {
+                    margin: 10px 0 10px 1px;
+                }
+                .form-check-label {
+                    margin: 0 0 0 0px;
+                }
+                .form-control,
+                .form-check-input {
+                    border-radius: 0;
+                    border: none;
+                    background-color: $color-grey;
+                    &:focus {
+                        box-shadow: 0 0 1px 1px $color-main;
+                    }
+                    &:checked {
+                        background-color: $color-main;
+                    }
+                }
+
+            }
+            .checkboxes {
+                .form-check {
+                    display: inline-block;
+                    margin: 20px 0 0 0;
+                    width: calc(25% - (24px / 4));
+                    &{@media only screen and (max-width: 1036px) {
+                        width: calc((100% / 3) - (24px / 3));
+                    }}
+                    &{@media only screen and (max-width: 850px) {
+                        width: calc(50% - (24px / 2));
+                    }}
+                    &{@media only screen and (max-width: 560px) {
+                        width: 100%;
+                    }}
+                }
+            }
+            .form-group {
+                margin-top: 10px;
+            }
+            .btn {
+                border-radius: 0;
+                border: none;
+                background-color: $color-main;
+                margin-top: 40px;
+                width: 100%;
+                text-transform: uppercase;
+            }
+        }
+    }
+    &.active {
+        display: flex;
+    }
+}

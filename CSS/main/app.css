@@ -9,10 +9,6 @@ body {
   font-weight: 300;
 }
 
-.mobile {
-  display: none;
-}
-
 a {
   color: #ffffff;
   text-decoration: none;
@@ -44,6 +40,37 @@ ul {
 
 ul li {
   display: inline-block;
+}
+
+.mobile {
+  display: none;
+}
+
+.en {
+  display: none !important;
+}
+
+.cz-off {
+  display: none !important;
+}
+
+.scroll-to {
+  padding-top: 200px;
+  margin-top: -200px;
+}
+
+.fade-in {
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  opacity: 0;
+  -webkit-transition: 250ms ease-in;
+  transition: 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 .head {
@@ -385,6 +412,121 @@ ul li {
   display: inline;
 }
 
+.contact .contact-box {
+  padding: 80px 60px;
+  -webkit-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.contact .contact-box h2 {
+  text-transform: uppercase;
+  color: #B58045;
+  display: block;
+  max-width: 300px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.contact .contact-box p {
+  display: block;
+  max-width: 300px;
+  margin: auto;
+}
+
+.contact .contact-box .button {
+  margin-top: 40px;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.contact .contact-box .button a {
+  padding: 8px 25px;
+}
+
+.contact .contact-dark {
+  background-color: #182939;
+}
+
+.contact .contact-dark p {
+  color: #ffffff;
+}
+
+.contact .contact-light {
+  background-color: #f0f0f0;
+}
+
+.contact .contact-light h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.contact .contact-light a {
+  color: #182939;
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+  margin: 2px;
+}
+
+.contact .contact-light p {
+  margin: 5px;
+}
+
+.contact .contact-light .underline::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 0.5px;
+  bottom: 0;
+  left: 0;
+  background-color: #182939;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.contact .contact-light .underline:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+footer {
+  padding: 20px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+footer a {
+  color: inherit;
+}
+
 .navbar {
   padding: 0;
   width: 100%;
@@ -414,7 +556,7 @@ ul li {
   border-bottom: 1px solid #ffffff;
 }
 
-.navbar .wrapper .en {
+.navbar .wrapper .en-opt {
   color: #bbbaba;
 }
 
@@ -646,6 +788,8 @@ ul li {
 .header-logos ul .button img {
   width: 20px;
   margin-left: 5px;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
 }
 
 .omega-white {
@@ -840,6 +984,148 @@ ul li {
   left: 0px;
 }
 
+.form-wrapper {
+  display: none;
+  z-index: 200;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  color: #B58045;
+  background-color: #f0f0f0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-wrapper .form-box {
+  max-height: 100%;
+  overflow-y: auto;
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 1000px;
+  padding: 50px;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.form-wrapper .form-box h1 {
+  margin-bottom: 20px;
+  color: #B58045;
+}
+
+.form-wrapper .form-box .col-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.form-wrapper .form-box .col-1 .cross {
+  width: 30px;
+  min-width: 30px;
+  margin-top: -15px;
+  cursor: pointer;
+}
+
+.form-wrapper .form-box form .input-block label,
+.form-wrapper .form-box form .form-check label,
+.form-wrapper .form-box form .form-group label {
+  margin: 10px 0 10px 1px;
+}
+
+.form-wrapper .form-box form .input-block .form-check-label,
+.form-wrapper .form-box form .form-check .form-check-label,
+.form-wrapper .form-box form .form-group .form-check-label {
+  margin: 0 0 0 0px;
+}
+
+.form-wrapper .form-box form .input-block .form-control,
+.form-wrapper .form-box form .input-block .form-check-input,
+.form-wrapper .form-box form .form-check .form-control,
+.form-wrapper .form-box form .form-check .form-check-input,
+.form-wrapper .form-box form .form-group .form-control,
+.form-wrapper .form-box form .form-group .form-check-input {
+  border-radius: 0;
+  border: none;
+  background-color: #f0f0f0;
+}
+
+.form-wrapper .form-box form .input-block .form-control:focus,
+.form-wrapper .form-box form .input-block .form-check-input:focus,
+.form-wrapper .form-box form .form-check .form-control:focus,
+.form-wrapper .form-box form .form-check .form-check-input:focus,
+.form-wrapper .form-box form .form-group .form-control:focus,
+.form-wrapper .form-box form .form-group .form-check-input:focus {
+  -webkit-box-shadow: 0 0 1px 1px #B58045;
+          box-shadow: 0 0 1px 1px #B58045;
+}
+
+.form-wrapper .form-box form .input-block .form-control:checked,
+.form-wrapper .form-box form .input-block .form-check-input:checked,
+.form-wrapper .form-box form .form-check .form-control:checked,
+.form-wrapper .form-box form .form-check .form-check-input:checked,
+.form-wrapper .form-box form .form-group .form-control:checked,
+.form-wrapper .form-box form .form-group .form-check-input:checked {
+  background-color: #B58045;
+}
+
+.form-wrapper .form-box form .checkboxes .form-check {
+  display: inline-block;
+  margin: 20px 0 0 0;
+  width: calc(25% - (24px / 4));
+}
+
+@media only screen and (max-width: 1036px) {
+  .form-wrapper .form-box form .checkboxes .form-check {
+    width: calc((100% / 3) - (24px / 3));
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .form-wrapper .form-box form .checkboxes .form-check {
+    width: calc(50% - (24px / 2));
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .form-wrapper .form-box form .checkboxes .form-check {
+    width: 100%;
+  }
+}
+
+.form-wrapper .form-box form .form-group {
+  margin-top: 10px;
+}
+
+.form-wrapper .form-box form .btn {
+  border-radius: 0;
+  border: none;
+  background-color: #B58045;
+  margin-top: 40px;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.form-wrapper.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.map {
+  margin-top: -50px;
+  width: 100%;
+  height: 400px;
+  background-color: #d8b58c;
+}
+
 @media only screen and (max-width: 1400px) {
   body .navbar .wrapper {
     margin: 0 20px;
@@ -878,6 +1164,9 @@ ul li {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
     margin-top: 80px;
+  }
+  body .map {
+    margin-top: 0px;
   }
 }
 
@@ -1002,6 +1291,9 @@ ul li {
   }
   body .gallery .photos {
     margin-top: -40px;
+  }
+  body .form-wrapper .form-box {
+    padding: 50px 10px;
   }
 }
 

@@ -1,0 +1,69 @@
+.contact {
+    .contact-box {
+        padding: 80px 60px;
+        box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.25);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        h2 {
+            text-transform: uppercase;
+            color: $color-main;
+            display: block;
+            max-width: 300px;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+        p {
+            display: block;
+            max-width: 300px;
+            margin: auto;
+        }
+        .button {
+            margin-top: 40px;
+            padding: 0;
+            text-transform: uppercase;
+            a {
+                padding: 8px 25px;
+            }
+        }
+    }
+    .contact-dark {
+        background-color: $color-second;
+        p {
+            color: $white;
+        }
+    }
+    .contact-light {
+        background-color: $color-grey;
+        h2 {
+            font-size: 30px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+        a {
+            color: $color-second;
+            transition: ease-in-out 0.1s;
+            margin: 2px;
+        }
+        p {
+            margin: 5px;
+        }
+        .underline::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 0.5px;
+            bottom: 0;
+            left: 0;
+            background-color: $color-second;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        .underline:hover::before {
+            transform: scaleX(1);
+        }
+    }
+}

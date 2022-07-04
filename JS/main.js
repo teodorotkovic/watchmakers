@@ -4,6 +4,8 @@ let mobileMenu = document.querySelector(".mobile-menu")
 let openedGallery = document.querySelector(".carousel-container")
 let carouselItem = document.querySelector(".carousel-item")
 
+const faders = document.querySelectorAll(".fade-in")
+
 //navbar chnge on scroll
 
 window.addEventListener("scroll", function() {
@@ -56,6 +58,21 @@ function openGallery4() {
     openedGallery.classList.toggle('active-gallery');
     document.querySelector(".photo-4").classList.toggle('active');
 }
+
+//FORM
+
+function reservation () {
+    document.querySelector(".form-wrapper").classList.toggle('active');
+}
+
+function reservationClose() {
+    document.querySelector(".form-wrapper").classList.remove('active');
+}
+
+//lang 
+
+
+
 
 //fade in effect on scroll
 
@@ -131,13 +148,4 @@ $(function () {
     });
 
 });
-
-var all = document.getElementsByTagName("*"), i = 0, rect, docWidth = document.documentElement.offsetWidth;
-for (; i < all.length; i++) {
-    rect = all[i].getBoundingClientRect();
-    if (rect.right > docWidth || rect.left < 0){
-        console.log(all[i]);
-        all[i].style.borderTop = '1px solid red';
-    }
-}
 

@@ -46,6 +46,9 @@
                 margin-top: 80px;
             }
         }
+        .map {
+            margin-top: 0px;
+        }
     }
 }
 @media only screen and (max-width: 1200px) {
@@ -194,6 +197,11 @@
             }
             .photos {
                 margin-top: -40px;
+            }
+        }
+        .form-wrapper {
+            .form-box {
+                padding: 50px 10px;
             }
         }
     }
