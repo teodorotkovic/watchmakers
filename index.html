@@ -22,6 +22,10 @@
   <link href="logo-animation-files/gwdimage_style.css" rel="stylesheet" data-version="16" data-exports-type="gwd-image">
   <link rel="stylesheet" href="logo-animation-files/logo-anim.css">
 
+  <!-- reCaptcha v2 -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer>
+  </script>
+
 </head>
 <body class="body">
   <div style="display: none;" class="intro-blackscreen" id="intro-animation">
@@ -41,13 +45,14 @@
   </div>
   <div class="navbar">
     <div class="wrapper">
-      <a href="#" class="underline desktop">CZ | <span class="en-opt">EN</span></a>
+      <a href="javascript:changeEN()" class="underline desktop cz">CZ | <span class="grey-opt">EN</span></a>
+      <a href="javascript:changeCZ()" class="underline desktop en">EN | <span class="grey-opt">CZ</span></a>
       <a href="#" class="logo">
         <img src="assets/img/logos/WM-logo.svg" alt="">
       </a>
       <ul class="desktop">
         <li><a href="#" class="underline">e-shop</a></li>
-        <li><a href="#contact" class="underline cz">kontakt</a></li>
+        <li class="cz"><a href="#contact" class="underline">kontakt</a></li>
         <li class="en"><a href="#contact" class="underline">contact</a></li>
       </ul>
       <div id="menu-toggle" class="mobile menu-toggle" onclick="hamTransition()">
@@ -71,8 +76,9 @@
         </div>
       </div>
       <div class="mobile-menu mobile">
-        <ul>
-          <li><a href="#">english</a></li>
+        <ul onclick="hamClose()">
+          <li class="cz"><a href="javascript:changeEN()">english</a></li>
+          <li class="en"><a href="javascript:changeCZ()">česky</a></li>
           <li><a href="#">e-shop</a></li>
           <li><a href="#contact">kontakt</a></li>
         </ul>
@@ -82,13 +88,14 @@
   <div class="head">
     <div class="video-wrapper">
       <video autoplay muted loop class="bg-video">
-        <source src="assets/video/bg-video-sample.mp4" type="video/mp4">
+        <source src="Assets/video/bg-video-sample.mp4" type="video/mp4">
       </video>
     </div>
     <div class="container-xxl header-logos desktop">
       <div class="row">
         <div class="col-2">
-          <p>autorizované servisní středisko značek:</p>
+          <p class="cz">autorizované servisní středisko značek:</p>
+          <p class="en">authorized service center of brands</p>
         </div>
         <div class="col-10">
           <ul>
@@ -98,7 +105,7 @@
             <li><img src="Assets/img/logos/Tissot-white.svg" alt="" class="tissot-white logos-item"></li>
             <li><img src="Assets/img/logos/Certina-white.svg" alt="" class="certina-white logos-item"></li>
             <li><img src="Assets/img/logos/Mido-white.svg" alt="" class="mido-white logos-item"></li>
-            <li><a href="#all-logos"><div class="button"><p>více</p><img src="Assets/img/icons/arrow.svg" alt=""></div></a></li>
+            <li><a href="#all-logos"><div class="button"><p class="cz">více</p><p class="en">more</p><img src="Assets/img/icons/arrow.svg" alt=""></div></a></li>
           </ul>
         </div>
       </div>
@@ -107,8 +114,9 @@
       <div class="row">
         <div class="col"></div>
         <div class="col-9 col-lg-5">
-          <h1>Specialisté na servis, opravy a péči o vysoce kvalitní mechanické a quartzové hodinky.</h1>
-          <div class="button" onclick="reservation()"><a href="#"><p>rezervovat servis</p></a></div>
+          <h1 class="cz">Specialisté na servis, opravy a péči o vysoce kvalitní mechanické a quartzové hodinky.</h1>
+          <h1 class="en">Experts in service, maintenance and care of high quality mechanical and quartz timepieces.</h1>
+          <div class="button" onclick="reservation()"><a href="#"><p class="cz">rezervovat servis</p><p class="en">order form</p></a></div>
         </div>
         <div class="col"></div>
       </div>
@@ -118,21 +126,24 @@
         <div class="col-4 col-lg-2">
           <a href="#about-us">
             <div class="bottom-menu-item">
-              <p>o nás</p>
+              <p class="cz">o nás</p>
+              <p class="en">about us</p>
             </div>
           </a>
         </div>
         <div class="col-4 col-lg-2">
           <a href="#gallery">
             <div class="bottom-menu-item">
-              <p>galerie</p>
+              <p class="cz">galerie</p>
+              <p class="en">gallery</p>
             </div>
           </a>
         </div>
         <div id="all-logos" class="col-4 col-lg-2">
           <a href="#contact">
             <div class="bottom-menu-item">
-              <p>kontakt</p>
+              <p class="cz">kontakt</p>
+              <p class="en">contact</p>
             </div>
           </a>
         </div>
@@ -144,7 +155,8 @@
     <div class="row justify-conten-center">
       <div class="col">
         <h2 class="WM">watchmakers cz</h2>
-        <h2>autorizované, certifikované <br> servisní středisko značek:</h2>
+        <h2 class="cz">autorizované, certifikované <br> servisní středisko značek:</h2>
+        <h2 class="en">authorized and certified <br> service center of brands:</h2>
       </div>
     </div>
     <div class="row justify-conten-center logo-section">
@@ -180,7 +192,8 @@
     </div>
     <div class="row justify-conten-center">
       <div class="autorizovany-dealer col">
-        <h2>Autorizovaný dealer:</h2>
+        <h2 class="cz">Autorizovaný dealer:</h2>
+        <h2 class="en">Authorized dealer:</h2>
       </div>
     </div>
     <div class="row justify-conten-center logo-section">
@@ -201,9 +214,13 @@
   <div id="about-us" class="container-xxl justify-conten-center about-us">
     <div class="row justify-conten-center scroll-to">
       <div class="col"></div>
-      <div class="col-10 col-md-5 col-lg-4">
+      <div class="col-10 col-md-5 col-lg-4 cz">
         <h1>O nás</h1>
         <p>Hodinářství Watchmakers CZ je novou podobou hodinářského ateliéru. Nabízíme značkový servis prestižních švýcarských manufaktur v nejvyšší možné kvalitě s individuálním přístupem k našim klientům a obchodním partnerům.</p>
+      </div>
+      <div class="col-10 col-md-5 col-lg-4 en">
+        <h1>About us</h1>
+        <p>Watchmakers CZ is a new form of watchmaking atelier. We offer branded service of prestigious Swiss manufactories, in the highest possible quality, with an individual approach to our clients and business partners.</p>
       </div>
       <div class="col-md-4 desktop">
         <img src="Assets/img/images/omega-calibre-3861.png" class=" about-us-image" alt="">
@@ -216,7 +233,8 @@
       <div class="row">
         <div class="col"></div>
         <div class="col-10 col-md-5 col-lg-4">
-          <p>Zajišťujeme autorizovaný servis pro většinu významných švýcarských značek, jako je Rolex, IWC, Audemars Piguet, Zenith, Montblanc...</p>
+          <p class="cz">Zajišťujeme autorizovaný servis pro většinu významných švýcarských značek, jako je Rolex, IWC, Audemars Piguet, Zenith, Montblanc...</p>
+          <p class="en"> We arrange as well an authorized service for most of the relevant Swiss brands such as Rolex, IWC, Audemars Piguet, Zenith, Montblanc...</p>
         </div>
         <div class="col-md-4 desktop">
         </div>
@@ -224,7 +242,8 @@
       </div>
       <div class="row">
         <div class="col">
-          <h1>Náš tým</h1>
+          <h1 class="cz">Náš tým</h1>
+          <h1 class="en">Our team</h1>
         </div>
       </div>
     </div>
@@ -238,17 +257,20 @@
         <div class="col-11 col-lg-4 profile">
           <img src="Assets/img/images/jiri-grunt.png" alt="">
           <h2>Jiří Grunt</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at lectus eu velit ullamcorper blandit quis nec tortor.</p>
+          <p class="cz">Vyučený a certifikovaný hodinář s více než 19letou praxí administrativy servisu a oprav hodinek Omega, Rado, Breitling, Rolex, Tag Heuer, Maurice Lacroix, Oris, Longines, Frederique Constant, Certina, Tissot. Je také ještě dodavatel renovací starožitných hodin pro Ministerstvo financí České republiky.</p>
+          <p class="en">Graduated and certified watchmaker with more than 18 years of experience in the administration and repair of Omega, Rado, Breitling, Rolex, Tag Heuer, Maurice Lacroix, Oris, Longines, Frederique Constant, Certina, Tissot watches. He is also a supplier of antique clock renovations for the Ministry of Finance of the Czech Republic.</p>
         </div>
         <div class="col-11 col-lg-4 profile">
           <img src="Assets/img/images/branko-otkovic.png" alt="">
           <h2>Branko Otković</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at lectus eu velit ullamcorper blandit quis nec tortor.</p>
+          <p class="cz">vyučený inženýr informatiky na Univerzitě v Bělehradě. V roce 2002 se aktivně podílel na vzniku prvního českého odborného hodinářského časopisů – Watch Magazine. V redakci magazínu působil dalších 10 let na pozicích Art Director a Sales. Dále, 10 let aktivně pracoval jako Business Development a Marketing Manager ve společnosti Azra Luxury Watches & Jewellery a nakonec jako Vedoucí butiku v Omega Boutique v Praze. Držitel titulu Omega Master a Ambassador hodinářské značky Ulysse Nardin.</p>
+          <p class="en">Graduated computer engineer at the Belgrade University. In 2002, he actively participated in the creation and launching of the Watch Magazine - the first Czech magazine about watches. He worked for the magazine for another 10 years in the positions of Art Director and Sales. He worked as a Business Development and Marketing Manager at Azra Luxury Watches & Jewelery and finally as a Boutique Manager at Omega Boutique in Prague. Holder of the title of Omega Master and Ulysse Nardin Ambassador.</p>
         </div>
         <div class="col-11 col-lg-4 profile">
           <img src="Assets/img/images/tomas-novotny.png" alt="">
           <h2>Tomáš Novotný</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at lectus eu velit ullamcorper blandit quis nec tortor.</p>
+          <p class="cz">Vyučený a certifikovaný hodinář s více než 17letou praxí administrativy a oprav hodinek Omega, Rado, Breitling, Rolex, IWC, Hublot, Audemars Piguet, Zenith, Tag Heuer, Maurice Lacroix, Oris, Longines, Frederique Constant, Certina, Tissot. Disponuje rovněž nemalými zkušenostmi v oblasti strojařiny.</p>
+          <p class="en">Born in 1986, graduated and certified watchmaker with more than 17 years of experience in administration and repair of watches Omega, Rado, Breitling, Rolex, IWC, Hublot, Audemars Piguet, Zenith, Tag Heuer, Maurice Lacroix, Oris, Longines, Frederique Constant, Certina, Tissot. He also has considerable experience in the field of mechanical engineering.</p>
         </div>
       </div>
     </div>
@@ -256,7 +278,8 @@
   <div id="gallery" class="container-xxl gallery">
     <div class="row gallery-header scroll-to">
       <div class="col">
-        <h1>Galerie</h1>
+        <h1 class="cz">Galerie</h1>
+        <h1 class="en">Gallery</h1>
       </div>
     </div>
     <div class="row justify-content-center photos">
@@ -309,25 +332,35 @@
   </div>
   <div id="contact" class="container-xxl contact">
     <div class="row justify-content-center  scroll-to">
-      <div class="col-12 col-md-5 contact-box contact-dark">
+      <div class="col-12 col-md-5 contact-box contact-dark cz">
         <h2>Objednejte se k nám</h2>
         <p>Máte zájem o renovaci pouzdra, běžnou péči, diagnostiku nebo kompletní servis Vašich hodinek? Potřebujete vyměnit baterku? Uvítáte nový stylový řemínek k Vašemu modelu nebo chcete jen poradit? Rezervujte si u nás svou návštěvu. Rádi Vás v našem ateliéru přivítáme.</p>
         <div class="button" onclick="reservation()"><a href="#"><p>rezervovat servis</p></a></div>
       </div>
+      <div class="col-12 col-md-5 contact-box contact-dark en">
+        <h2>Book your visit</h2>
+        <p>Are you interested in renovating your watch case, periodical care, diagnostics or overall service of your timepiece? Do you need to replace the battery in your quartz? Are you considering buying a new stylish strap or you would need just an advice about your model? Book your visit with us. We will be happy to welcome you in our atelier.</p>
+        <div class="button" onclick="reservation()"><a href="#"><p>order form</p></a></div>
+      </div>
       <div class="col-12 col-md-5 contact-box contact-light">
-        <h2>Kontakt</h2>
+        <h2 class="cz">Kontakt</h2>
+        <h2 class="en">Contact</h2>
         <a href="" class="underline">info@watchmakers.cz</a>
         <a href="" class="underline">+420 603 840 850</a>
-        <h2>Otevírací doba</h2>
-        <p>PO - PÁ <br/> 09:00 - 18:00</p>
-        <h2>Adresa</h2>
+        <h2 class="cz">Otevírací doba</h2>
+        <h2 class="en">Opening hours</h2>
+        <p class="cz">PO - PÁ <br/> 09:00 - 18:00</p>
+        <p class="en">MO - FRI <br/> 09:00 - 18:00</p>
+        <h2 class="cz">Adresa</h2>
+        <h2 class="en">Adress</h2>
         <p>Watchmakers CZ, s.r.o. <br/> Bílkova 122/6 <br/> 110 00 Praha <br/> Česká republika</p>
       </div>
     </div>
   </div>
-  <div class="map"></div>
+  <div id="map" class="map"></div>
   <footer>
-    <p>Watchmakers CZ, s.r.o. | IČ 085 26 940 | DIČ CZ 08526940 | Spisová značka C 320432, vedená u Městského soudu v Praze.</p>
+    <p class="cz">Watchmakers CZ, s.r.o. | IČ 085 26 940 | DIČ CZ 08526940 | Spisová značka C 320432, vedená u Městského soudu v Praze.</p>
+    <p class="en">Company ID 085 26 940 | VAT no. CZ 08526940 | Business Register File No. C 320432, held at the Municipal Court in Prague.</p>
   </footer>
 
 
@@ -339,24 +372,27 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-11">
-            <h1>Rezervace servisu</h1>
+            <h1 class="cz">Rezervace servisu</h1>
+            <h1 class="en">Order form</h1>
           </div>
           <div class="col-1">
             <img class="cross" onclick="reservationClose()" src="Assets/img/icons/cross.svg" alt="">
           </div>
         </div>
-        <form action="">
+        <form action="PHP/form-handler.php" method="post">
           <div class="row">
             <div class="col-12 col-md-6">
               <div class="input-block">
-                <label for="first-name">Jméno</label>
-                <input type="text" id="first-name" class="form-control" required>
+                <label class="cz" for="first-name">Jméno</label>
+                <label class="en" for="first-name">Name</label>
+                <input name="firstName" type="text" id="first-name" class="form-control" required>
               </div>
             </div>
             <div class="col-12 col-md-6">
               <div class="input-block">
-                <label for="last-name">Příjmení</label>
-                <input type="text" id="last-name" class="form-control" required>
+                <label class="cz" for="last-name">Příjmení</label>
+                <label class="cz" for="last-name">Příjmení</label>
+                <input name="lastName" type="text" id="last-name" class="form-control" required>
               </div>
             </div>
           </div>
@@ -364,93 +400,129 @@
             <div class="col-12 col-md-6">
               <div class="input-block">
                 <label for="e-mail">E-mail</label>
-                <input type="e-mail" id="e-mail" class="form-control" required>
+                <input name="email" type="e-mail" id="e-mail" class="form-control" required>
               </div>
             </div>
             <div class="col-12 col-md-6">
               <div class="input-block">
-                <label for="phone">Telefon</label>
-                <input type="tel" id="phone" class="form-control" required>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 col-md-6">
-              <div class="input-block">
-                <label for="date">Datum</label>
-                <input type="text" id="date" class="form-control" required>
-              </div>
-            </div>
-            <div class="col-12 col-md-6">
-              <div class="input-block">
-                <label for="time">Čas</label>
-                <input type="text" id="time" class="form-control" required>
+                <label class="cz" for="phone">Telefon</label>
+                <label class="en" for="phone">Phone</label>
+                <input name="tel" type="tel" id="phone" class="form-control" required>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-12 col-md-6">
               <div class="input-block">
-                <label for="brand">Značka</label>
-                <input type="text" id="brand" class="form-control" required>
+                <label class="cz"for="date">Datum</label>
+                <label class="en"for="date">Date</label>
+                <input name="date" type="text" id="date" class="form-control" required>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="input-block">
+                <label class="cz" for="time">Čas</label>
+                <label class="en" for="time">Time</label>
+                <input name="time" type="text" id="time" class="form-control" required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="input-block">
+                <label class="cz" for="brand">Značka</label>
+                <label class="en" for="brand">Brand</label>
+                <input name="brand" type="text" id="brand" class="form-control" required>
               </div>
             </div>
             <div class="col-12 col-md-6">
               <div class="input-block">
                 <label for="model">Model</label>
-                <input type="text" id="model" class="form-control" required>
+                <input name="model" type="text" id="model" class="form-control" required>
               </div>
             </div>
           </div>
           <div class="row checkbox-row">
             <div class="col-12 checkboxes">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="check1">
-                <label class="form-check-label" for="check1">
+                <input name="services[]" class="form-check-input" type="checkbox" value="diagnostika" id="check1">
+                <label class="form-check-label cz" for="check1">
                   Diagnostika
                 </label>
+                <label class="form-check-label en" for="check1">
+                  Diagnostics
+                </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="check2">
-                <label class="form-check-label" for="check2">
+                <input name="services[]" class="form-check-input" type="checkbox" value="oprava" id="check2">
+                <label class="form-check-label cz" for="check2">
                   Oprava
                 </label>
+                <label class="form-check-label en" for="check2">
+                  Repair
+                </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="check3">
-                <label class="form-check-label" for="check3">
+                <input name="services[]" class="form-check-input" type="checkbox" value="periodicky-servis" id="check3">
+                <label class="form-check-label cz" for="check3">
                   Periodický servis
                 </label>
+                <label class="form-check-label en" for="check3">
+                  Periodic maintenance
+                </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="check4">
-                <label class="form-check-label" for="check4">
+                <input name="services[]" class="form-check-input" type="checkbox" value="cisteni/lesteni-pouzdra" id="check4">
+                <label class="form-check-label cz" for="check4">
                   Čištění / leštění pouzdra
                 </label>
+                <label class="form-check-label en" for="check4">
+                  Cleaning / polishing
+                </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="check5">
-                <label class="form-check-label" for="check5">
+                <input name="services[]" class="form-check-input" type="checkbox" value="vymena-baterek" id="check5">
+                <label class="form-check-label cz" for="check5">
                   Výměna baterek
                 </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="check6">
-                <label class="form-check-label" for="check6">
-                  Výměna pásku
+                <label class="form-check-label en" for="check5">
+                  Battery replacement
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="check7">
-                <label class="form-check-label" for="check7">
+                <input name="services[]" class="form-check-input" type="checkbox" value="vymena-pasku" id="check6">
+                <label class="form-check-label cz" for="check6">
+                  Výměna pásku
+                </label>
+                <label class="form-check-label en" for="check6">
+                  Band replacement
+                </label>
+              </div>
+              <div class="form-check">
+                <input name="services[]" class="form-check-input" type="checkbox" value="ostatne/konzultace" id="check7">
+                <label class="form-check-label cz" for="check7">
                   Ostatně / konzultace
+                </label>
+                <label class="form-check-label en" for="check7">
+                  Other / consultation
                 </label>
               </div>
             </div>
           </div>
           <div class="form-group">
             <label for="validationTextarea" class="form-label">Vaše zpráva</label>
-            <textarea class="form-control" id="validationTextarea"></textarea>
+            <textarea name="message" class="form-control" id="validationTextarea"></textarea>
+          </div>
+          <div class="form-check privacy-policy-check">
+            <input class="form-check-input" type="checkbox" value="" id="check8" required>
+            <label class="form-check-label cz" for="check8">
+              Souhlasím se zpracováním osobních údajů.
+            </label>
+            <label class="form-check-label en" for="check8">
+              I agree with the processing of personal data.
+            </label>
+          </div>
+          <div class="g-recaptcha" data-sitekey="6LegzmQhAAAAAJNbglRNeh-CVAizeZRzcV5Uwdkq" style="margin-top: 30px;">
           </div>
           <button type="submit" class="btn btn-primary">Rezervovat servis</button>
         </form>
@@ -477,7 +549,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   <script src="JS/smooth-scrollbar.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  
+  <script src="JS/map.js"></script>
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDI5q3t_jYx1CwK5gbKEWzwddiKHcx-DuY&callback=initMap">
+  </script>
+
   <script>
     var year1 = new Date();
     var year2 = year1.getUTCFullYear();
@@ -495,7 +571,8 @@
       locale: {
         firstDayOfWeek: 1 // start week on Monday
       },
-      minDate: "today"
+      minDate: "today",
+      dateFormat: "d/m/y",
     }
     flatpickr("#date", config1);
 
@@ -509,5 +586,8 @@
     }
     flatpickr("#time", config2);
   </script>
+
+  <!-- reCaptcha v2 -->
+</div>
 </body>
 </html>

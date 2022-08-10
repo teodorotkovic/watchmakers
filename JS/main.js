@@ -6,6 +6,9 @@ let carouselItem = document.querySelector(".carousel-item")
 
 const faders = document.querySelectorAll(".fade-in")
 
+const elementCZ = document.querySelectorAll(".cz")
+const elementEN = document.querySelectorAll(".en")
+
 //navbar chnge on scroll
 
 window.addEventListener("scroll", function() {
@@ -23,6 +26,11 @@ window.addEventListener("scroll", function() {
 function hamTransition() {
     hamburger.classList.toggle('open');
     mobileMenu.classList.toggle('open');
+}
+
+function hamClose() {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
 }
 
 //blackscreen hidden after some time
@@ -71,7 +79,23 @@ function reservationClose() {
 
 //lang 
 
+function changeEN() {
+    for (let i = 0; i < elementCZ.length; i++) {
+        elementCZ[i].classList.toggle('cz-off');
+    }
+    for (let i = 0; i < elementEN.length; i++) {
+        elementEN[i].classList.remove('en');
+    }
+}
 
+function changeCZ() {
+    for (let i = 0; i < elementCZ.length; i++) {
+        elementCZ[i].classList.remove('cz-off');
+    }
+    for (let i = 0; i < elementEN.length; i++) {
+        elementEN[i].classList.toggle('en');
+    }
+}
 
 
 //fade in effect on scroll
