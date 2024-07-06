@@ -42,7 +42,6 @@
     $headers .= "Reply-To: $visitor_email \r\n";
 
     function reCaptcha($recaptcha){
-        $secret = "6LegzmQhAAAAAHhPtVrAXLMcKxMDdPTlHOTBR0Sz";
         $ip = $_SERVER['REMOTE_ADDR'];
         
         $postvars = array("secret"=>$secret, "response"=>$recaptcha, "remoteip"=>$ip);
